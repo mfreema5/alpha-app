@@ -9,11 +9,11 @@ Various things along the way.
 ```bash
 $ git branch -u dev
 error: the requested upstream branch 'dev' does not exist
-hint: 
+hint:
 hint: If you are planning on basing your work on an upstream
 hint: branch that already exists at the remote, you may need to
 hint: run "git fetch" to retrieve it.
-hint: 
+hint:
 hint: If you are planning to push out a new local branch that
 hint: will track its remote counterpart, you may want to use
 hint: "git push -u" to set the upstream config as you push.
@@ -29,7 +29,7 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin dev
 ```
 
-Maybe I need to specifiy the remote? 
+Maybe I need to specifiy the remote?
 
 NOPE:
 
@@ -58,3 +58,21 @@ Branch dev2 set up to track remote branch master from origin.
 So, the process that works is one that I can not find *anywhere* in the documentation.  Thanks for the help, guys!
 
 Git seems awesome in function; the Git documentation **BLOWS**.
+
+----
+
+Apparently you can't make any `scaffolds` before you run `rake db:migrate`.  (Karl probably mentioned this, and I forgot it.)
+
+On a related note: here's another possibly useful command: `rails destroy scaffold <name>`.  It removes all the files created by `rails generate scaffold <name>`.
+
+But to undo even more fundamental damage, remove/recreate the whole database.
+
+* `rake db:drop`
+* `rake db:create`
+* `rails generate scaffold <name> <field>:<type> <field>:<type> <field>:<type>`
+* `rake db:migrate`
+
+----
+
+You can't have hyphens in names.  Took me an hour to realize that.  Bother.
+
