@@ -1,0 +1,8 @@
+$ rails -v
+Rails 4.2.0
+
+$ ruby -v
+ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin13]
+
+$ git --version
+git version 2.3.0
