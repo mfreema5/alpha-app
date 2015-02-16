@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :sources
-
   resources :courses
+
+  resources :sources
 
   resources :sections
 

@@ -59,9 +59,9 @@ So, the process that works is one that I can not find *anywhere* in the document
 
 Git seems awesome in function; the Git documentation **BLOWS**.
 
-----
+## Making and breaking scaffolds
 
-Apparently you can't make any `scaffolds` before you run `rake db:migrate`.  (Karl probably mentioned this, and I forgot it.)
+Apparently you can't make any `scaffolds` before you run `rake db:migrate`.  (Or not?  I made a lot of wrong turns, so I'm not sure what's peculiar to my experiences here.)
 
 On a related note: here's another possibly useful command: `rails destroy scaffold <name>`.  It removes all the files created by `rails generate scaffold <name>`.
 
@@ -72,7 +72,24 @@ But to undo even more fundamental damage, remove/recreate the whole database.
 * `rails generate scaffold <name> <field>:<type> <field>:<type> <field>:<type>`
 * `rake db:migrate`
 
-----
+Why did I do all that?
 
-You can't have hyphens in names.  Took me an hour to realize that.  Bother.
+Because you can't have hyphens in names.  Took me an hour to realize that.  Bother.
 
+## Deleting a scaffold & table
+
+There's probably a better way, but this seemed to work.
+
+First I ran &ldquo;`rails destroy scaffold <name>`&rdquo;
+
+Then I editted `db/schema.rb` and removed the stanza:
+
+```ruby
+create_table "<name>"…
+  …
+end
+```
+
+Then I ran &ldquo;`rake db:reset`&rdquo;.
+
+All gone.
