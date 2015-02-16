@@ -8,8 +8,7 @@ The user enters information about courses and source materials, such as textbook
 
 Sketch of tables and fields:
 
-[[img/rollingread-tables.png]]
-
+![Tables sketch](img/rollingread-tables.png)
 
 
 
