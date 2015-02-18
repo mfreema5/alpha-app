@@ -43,3 +43,16 @@ group :development, :test do
   gem 'spring'
 end
 
+
+# Add these lines to your app's Gemfile to make the rails console more awesome
+# (group :development limits these to development environments, which makes sense)
+#
+# *** Don't forget to run $ bundle install after adding these lines! ***
+#
+ 
+group :development do
+  # Some fancypants stuff for rails console
+  gem 'brice'
+  gem 'hirb'
+end
+gem "haml"
