@@ -69,6 +69,10 @@ class SourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def source_params
+<<<<<<< HEAD
       params[:source]
+=======
+      params.require(:source).permit(:short_title, :biblio_info, :url, :course_id)
+>>>>>>> 0535426fc2a2a057b99edf9097e6da1de9e0d3c8
     end
 end

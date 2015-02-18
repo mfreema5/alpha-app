@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course number:</strong>
+  <%= @course.course_number %>
+</p>
+
+<p>
+  <strong>Short title:</strong>
+  <%= @course.short_title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Meet day1:</strong>
+  <%= @course.meet_day1 %>
+</p>
+
+<p>
+  <strong>Meet day2:</strong>
+  <%= @course.meet_day2 %>
+</p>
+
+<p>
+  <strong>Meet day3:</strong>
+  <%= @course.meet_day3 %>
+</p>
+
+<p>
+  <strong>Meet day4:</strong>
+  <%= @course.meet_day4 %>
+</p>
+
+<p>
+  <strong>Meet day5:</strong>
+  <%= @course.meet_day5 %>
+</p>
+
+<p>
+  <strong>Meet day6:</strong>
+  <%= @course.meet_day6 %>
+</p>
+
+<p>
+  <strong>Meet day7:</strong>
+  <%= @course.meet_day7 %>
+</p>
+
+<p>
+  <strong>Semester:</strong>
+  <%= @course.semester_id %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
