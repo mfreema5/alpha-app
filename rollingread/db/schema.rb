@@ -11,23 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150218010851) do
-=======
-ActiveRecord::Schema.define(version: 20150216181933) do
->>>>>>> 0535426fc2a2a057b99edf9097e6da1de9e0d3c8
+ActiveRecord::Schema.define(version: 20150218041901) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "course_number"
     t.string   "short_title"
     t.text     "description"
-    t.integer  "meet_day1"
-    t.integer  "meet_day2"
-    t.integer  "meet_day3"
-    t.integer  "meet_day4"
-    t.integer  "meet_day5"
-    t.integer  "meet_day6"
-    t.integer  "meet_day7"
+    t.boolean  "meet_day1"
+    t.boolean  "meet_day2"
+    t.boolean  "meet_day3"
+    t.boolean  "meet_day4"
+    t.boolean  "meet_day5"
+    t.boolean  "meet_day6"
+    t.boolean  "meet_day7"
     t.integer  "semester_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -37,23 +33,28 @@ ActiveRecord::Schema.define(version: 20150216181933) do
     t.integer  "chapter_number"
     t.text     "details"
     t.string   "read_by"
+    t.boolean  "completed"
     t.integer  "source_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
+  create_table "semesters", force: :cascade do |t|
+    t.string   "short_title"
+    t.text     "description"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "sources", force: :cascade do |t|
-<<<<<<< HEAD
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-=======
     t.string   "short_title"
     t.text     "biblio_info"
     t.string   "url"
     t.integer  "course_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
->>>>>>> 0535426fc2a2a057b99edf9097e6da1de9e0d3c8
   end
 
 end

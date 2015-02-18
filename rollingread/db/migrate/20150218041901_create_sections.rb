@@ -4,6 +4,7 @@ class CreateSections < ActiveRecord::Migration
       t.integer :chapter_number
       t.text :details
       t.string :read_by
+      t.boolean :completed
       t.integer :source_id
 
       t.timestamps null: false

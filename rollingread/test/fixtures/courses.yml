@@ -4,24 +4,24 @@ one:
   course_number: MyString
   short_title: MyString
   description: MyText
-  meet_day1: 1
-  meet_day2: 1
-  meet_day3: 1
-  meet_day4: 1
-  meet_day5: 1
-  meet_day6: 1
-  meet_day7: 1
+  meet_day1: false
+  meet_day2: false
+  meet_day3: false
+  meet_day4: false
+  meet_day5: false
+  meet_day6: false
+  meet_day7: false
   semester_id: 1
 
 two:
   course_number: MyString
   short_title: MyString
   description: MyText
-  meet_day1: 1
-  meet_day2: 1
-  meet_day3: 1
-  meet_day4: 1
-  meet_day5: 1
-  meet_day6: 1
-  meet_day7: 1
+  meet_day1: false
+  meet_day2: false
+  meet_day3: false
+  meet_day4: false
+  meet_day5: false
+  meet_day6: false
+  meet_day7: false
   semester_id: 1

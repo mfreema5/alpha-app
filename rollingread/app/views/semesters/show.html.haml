@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Short title:
+  = @semester.short_title
+%p
+  %b Description:
+  = @semester.description
+%p
+  %b Start date:
+  = @semester.start_date
+%p
+  %b End date:
+  = @semester.end_date
+
+= link_to 'Edit', edit_semester_path(@semester)
+\|
+= link_to 'Back', semesters_path

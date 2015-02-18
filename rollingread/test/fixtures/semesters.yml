@@ -2,12 +2,12 @@
 
 one:
   short_title: MyString
-  biblio_info: MyText
-  url: MyString
-  course_id: 1
+  description: MyText
+  start_date: 2015-02-17
+  end_date: 2015-02-17
 
 two:
   short_title: MyString
-  biblio_info: MyText
-  url: MyString
-  course_id: 1
+  description: MyText
+  start_date: 2015-02-17
+  end_date: 2015-02-17

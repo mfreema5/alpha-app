@@ -4,10 +4,12 @@ one:
   chapter_number: 1
   details: MyText
   read_by: MyString
+  completed: false
   source_id: 1
 
 two:
   chapter_number: 1
   details: MyText
   read_by: MyString
+  completed: false
   source_id: 1
