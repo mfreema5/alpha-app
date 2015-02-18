@@ -1,0 +1,29 @@
+%h1 Listing sections
+
+%table
+  %thead
+    %tr
+      %th Chapter number
+      %th Details
+      %th Read by
+      %th Completed
+      %th Source
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @sections.each do |section|
+      %tr
+        %td= section.chapter_number
+        %td= section.details
+        %td= section.read_by
+        %td= section.completed
+        %td= section.source_id
+        %td= link_to 'Show', section
+        %td= link_to 'Edit', edit_section_path(section)
+        %td= link_to 'Destroy', section, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Section', new_section_path

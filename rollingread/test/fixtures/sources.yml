@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  short_title: MyString
+  biblio_info: MyText
+  url: MyString
+  course_id: 1
+
+two:
+  short_title: MyString
+  biblio_info: MyText
+  url: MyString
+  course_id: 1

@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Course number:
+  = @course.course_number
+%p
+  %b Short title:
+  = @course.short_title
+%p
+  %b Description:
+  = @course.description
+%p
+  %b Meet day1:
+  = @course.meet_day1
+%p
+  %b Meet day2:
+  = @course.meet_day2
+%p
+  %b Meet day3:
+  = @course.meet_day3
+%p
+  %b Meet day4:
+  = @course.meet_day4
+%p
+  %b Meet day5:
+  = @course.meet_day5
+%p
+  %b Meet day6:
+  = @course.meet_day6
+%p
+  %b Meet day7:
+  = @course.meet_day7
+%p
+  %b Semester:
+  = @course.semester_id
+
+= link_to 'Edit', edit_course_path(@course)
+\|
+= link_to 'Back', courses_path

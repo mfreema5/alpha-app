@@ -43,3 +43,14 @@ group :development, :test do
   gem 'spring'
 end
 
+
+# Per Prof.Stolley
+
+group :development do
+  # Some fancypants stuff for rails console
+  gem 'brice'
+  gem 'hirb'
+end
+
+gem 'haml-rails', '~> 0.8'
+
