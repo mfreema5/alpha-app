@@ -12,7 +12,7 @@ Sketch of tables and fields:
 
 Sketch of default view:
 
-![Default view](img/rollingread-default-view.png]
+![Default view](img/rollingread-default-view.png)
 
 
 
