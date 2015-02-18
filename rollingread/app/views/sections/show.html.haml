@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Chapter number:
+  = @section.chapter_number
+%p
+  %b Details:
+  = @section.details
+%p
+  %b Read by:
+  = @section.read_by
+%p
+  %b Source:
+  = @section.source_id
+
+= link_to 'Edit', edit_section_path(@section)
+\|
+= link_to 'Back', sections_path
