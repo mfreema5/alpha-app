@@ -10,7 +10,9 @@ Sketch of tables and fields:
 
 ![Tables sketch](img/rollingread-tables.png)
 
+Sketch of default view:
 
+![Default view](rollingread-default-view.png]
 
 
 
