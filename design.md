@@ -24,8 +24,50 @@ Sketch of default view:
 
 * `rails generate scaffold Source short_title:string biblio_info:text url:string course_id:integer`
 
-* `rails generate scaffold Section chapter_number:integer details:text read_by:string completed:boolean source_id:integer`
+* `rails generate scaffold Section chapter_number:string details:text read_by:date completed:boolean source_id:integer`
 
+----
+
+## Validations/tests
+
+#### Semesters
+
+| name        | type   | required? | default | test |
+|-------------|--------|-----------|---------|------|
+| short_title | string |     Y     |         | uniqueness |
+| description | text   |           |         |      |
+| start_date  | date   |     Y     |         |      |
+| end_date    | date   |     Y     |         | after start_date |
+
+####Courses 
+
+| name          | type    | required? | default | test |
+|---------------|---------|-----------|---------|------|
+| course_number | string  |           |         |      |
+| short_title   | string  |     Y     |         | uniqueness |
+| description   | text    |           |         |      |
+| meet_day_bits | integer |     Y     |         |      |
+| semester_id   | integer |     Y     |         | must exist |
+
+####Sources
+
+| name        | type    | required? | default | test |
+|-------------|---------|-----------|---------|------|
+| short_title | string  |     Y     |         | uniqueness |
+| biblio_info | text    |           |         |      |
+| url         | string  |           |         | is well-formed |
+| course_id   | integer |     Y     |         | must exist |
+
+
+#### Sections
+
+| name           | type    | required? | default | test |
+|----------------|---------|-----------|---------|------|
+| chapter_number | string  |     Y     |         |      |
+| details        | text    |           |         |      |
+| read_by        | date    |     Y     |         | before Semester.end_date |
+| completed      | boolean |           |  false  |      |
+| source_id      | integer |     Y     |         | must exist |
 
 
 

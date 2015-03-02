@@ -130,3 +130,95 @@ def default
   end
 end
 ```
+
+----
+
+# Days as bits
+
+----
+
+## Days to bits
+
+```ruby
+2.2.0 :001 > a=18
+ => 18 
+2.2.0 :002 > (a).to_s(2)
+ => "10010" 
+
+2.2.0 :003 > 128.to_s(2)
+ => "10000000" 
+2.2.0 :004 > 128.modulo(2)
+ => 0 
+
+2.2.0 :005 > 127.to_s(2)
+ => "1111111" 
+2.2.0 :006 > 127.modulo(2)
+ => 1 
+
+2.2.0 :007 > (a).to_s(2)
+ => "10010"
+2.2.0 :008 > (a >> 1).to_s(2)
+ => "1001" 
+2.2.0 :009 > (a >> 2).to_s(2)
+ => "100" 
+2.2.0 :010 > (a >> 3).to_s(2)
+ => "10" 
+2.2.0 :011 > (a >> 4).to_s(2)
+ => "1" 
+```
+
+So, if we have an integer 0-128, it will represent every possible combination of days in the week that a course might meet.
+
+If we set Monday as the first bit, then the bits are: `USFHWTM`, in other words {Sun}{Sat}{Fri}{Thu}{Wed}{Tue}{Mon}.  So, for an integer of 5:
+
+* `5.to_s(2) => "101"`
+
+Which means the class meets Mondays and Wednesdays:
+
+| U | S | F | H | W | T | M |
+|---|---|---|---|---|---|---|
+|   |   |   |   | 1 | 0 | 1 |
+
+### Methods
+
+Basic (ugly) method for checking if a day's bit is true for a given integer:
+
+```ruby
+def check_day(meet_days_integer,day_to_check)
+
+  day_shift = {monday: 0, tuesday: 1, wednesday: 2, thursday: 3, friday: 4, saturday: 5, sunday:6}
+
+  day_shift_int = day_shift[day_to_check].to_i
+  shifted_int = ( meet_days_integer >> day_shift_int ).to_s(2)
+  day_checked = shifted_int.to_i % 2
+  return day_checked.to_s
+end
+```
+
+* Notes
+  * As it stands, the method expects `day_to_check` to be passed as a symbol; use `.to_sym`.
+    * Should probably do that in the method
+  * It returns a string, either "`1`" or "`0`"
+    * Should probably return boolean true/false
+
+### Views
+
+A quick way to transform from check-boxes to an integer:
+
+Make each day's check-box have the integer value of its bit.  Sum all the checked boxes and return the summed integer.
+
+In other words:
+
+* Monday=1
+* Tuesday=2
+* Wednesday=4
+* Thursday=8
+* Friday=16
+* Saturday=32
+* Sunday=64
+
+In Ruby on Rails, where is the easiest place to do the math?  Javascript in the View?  Or something in the… Controller?  Model?
+
+
+
+
