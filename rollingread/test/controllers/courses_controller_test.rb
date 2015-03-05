@@ -18,7 +18,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "should create course" do
     assert_difference('Course.count') do
-      post :create, course: { course_number: @course.course_number, description: @course.description, meet_day1: @course.meet_day1, meet_day2: @course.meet_day2, meet_day3: @course.meet_day3, meet_day4: @course.meet_day4, meet_day5: @course.meet_day5, meet_day6: @course.meet_day6, meet_day7: @course.meet_day7, semester_id: @course.semester_id, short_title: @course.short_title }
+      post :create, course: { course_number: @course.course_number, description: @course.description, meet_days: @course.meet_days, semester_id: @course.semester_id, short_title: @course.short_title }
     end
 
     assert_redirected_to course_path(assigns(:course))
@@ -35,7 +35,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "should update course" do
-    patch :update, id: @course, course: { course_number: @course.course_number, description: @course.description, meet_day1: @course.meet_day1, meet_day2: @course.meet_day2, meet_day3: @course.meet_day3, meet_day4: @course.meet_day4, meet_day5: @course.meet_day5, meet_day6: @course.meet_day6, meet_day7: @course.meet_day7, semester_id: @course.semester_id, short_title: @course.short_title }
+    patch :update, id: @course, course: { course_number: @course.course_number, description: @course.description, meet_days: @course.meet_days, semester_id: @course.semester_id, short_title: @course.short_title }
     assert_redirected_to course_path(assigns(:course))
   end
 

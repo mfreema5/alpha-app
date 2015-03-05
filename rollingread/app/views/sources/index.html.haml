@@ -4,8 +4,8 @@
   %thead
     %tr
       %th Short title
-      %th Biblio info
-      %th Url
+      %th Description
+      %th Dummy
       %th Course
       %th
       %th
@@ -15,9 +15,9 @@
     - @sources.each do |source|
       %tr
         %td= source.short_title
-        %td= source.biblio_info
-        %td= source.url
-        %td= source.course_id
+        %td= source.description
+        %td= source.dummy
+        %td= source.course
         %td= link_to 'Show', source
         %td= link_to 'Edit', edit_source_path(source)
         %td= link_to 'Destroy', source, :method => :delete, :data => { :confirm => 'Are you sure?' }

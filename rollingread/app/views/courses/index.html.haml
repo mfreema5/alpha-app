@@ -6,13 +6,7 @@
       %th Course number
       %th Short title
       %th Description
-      %th Meet day1
-      %th Meet day2
-      %th Meet day3
-      %th Meet day4
-      %th Meet day5
-      %th Meet day6
-      %th Meet day7
+      %th Meet days
       %th Semester
       %th
       %th
@@ -24,14 +18,8 @@
         %td= course.course_number
         %td= course.short_title
         %td= course.description
-        %td= course.meet_day1
-        %td= course.meet_day2
-        %td= course.meet_day3
-        %td= course.meet_day4
-        %td= course.meet_day5
-        %td= course.meet_day6
-        %td= course.meet_day7
-        %td= course.semester_id
+        %td= course.meet_days
+        %td= course.semester
         %td= link_to 'Show', course
         %td= link_to 'Edit', edit_course_path(course)
         %td= link_to 'Destroy', course, :method => :delete, :data => { :confirm => 'Are you sure?' }

@@ -1,0 +1,28 @@
+= form_for @assignment do |f|
+  - if @assignment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@assignment.errors.count, "error")} prohibited this assignment from being saved:"
+      %ul
+        - @assignment.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :short_title
+    = f.text_field :short_title
+  .field
+    = f.label :details
+    = f.text_area :details
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :due_date
+    = f.date_select :due_date
+  .field
+    = f.label :completed
+    = f.check_box :completed
+  .field
+    = f.label :source
+    = f.text_field :source
+  .actions
+    = f.submit 'Save'

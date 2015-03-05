@@ -4,16 +4,11 @@ class CreateCourses < ActiveRecord::Migration
       t.string :course_number
       t.string :short_title
       t.text :description
-      t.boolean :meet_day1
-      t.boolean :meet_day2
-      t.boolean :meet_day3
-      t.boolean :meet_day4
-      t.boolean :meet_day5
-      t.boolean :meet_day6
-      t.boolean :meet_day7
-      t.integer :semester_id
+      t.integer :meet_days
+      t.belongs_to :semester, index: true
 
       t.timestamps null: false
     end
+    add_foreign_key :courses, :semesters
   end
 end

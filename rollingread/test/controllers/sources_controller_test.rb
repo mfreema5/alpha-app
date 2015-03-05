@@ -18,7 +18,7 @@ class SourcesControllerTest < ActionController::TestCase
 
   test "should create source" do
     assert_difference('Source.count') do
-      post :create, source: { biblio_info: @source.biblio_info, course_id: @source.course_id, short_title: @source.short_title, url: @source.url }
+      post :create, source: { course_id: @source.course_id, description: @source.description, dummy: @source.dummy, short_title: @source.short_title }
     end
 
     assert_redirected_to source_path(assigns(:source))
@@ -35,7 +35,7 @@ class SourcesControllerTest < ActionController::TestCase
   end
 
   test "should update source" do
-    patch :update, id: @source, source: { biblio_info: @source.biblio_info, course_id: @source.course_id, short_title: @source.short_title, url: @source.url }
+    patch :update, id: @source, source: { course_id: @source.course_id, description: @source.description, dummy: @source.dummy, short_title: @source.short_title }
     assert_redirected_to source_path(assigns(:source))
   end
 

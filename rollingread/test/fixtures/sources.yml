@@ -2,12 +2,24 @@
 
 one:
   short_title: MyString
-  biblio_info: MyText
-  url: MyString
-  course_id: 1
+  description: MyText
+  dummy: false
+  course_id: 
 
 two:
   short_title: MyString
-  biblio_info: MyText
-  url: MyString
-  course_id: 1
+  description: MyText
+  dummy: false
+  course_id: 
+
+spring:
+  short_title: AgileDev
+  description: Ruby, S., Thomas, D., and D. H. Hansson. Agile Web Development with Rails 4.
+  dummy: false
+  course: spring
+
+fall:
+  short_title: URL
+  description: 
+  dummy: true
+  course: fall

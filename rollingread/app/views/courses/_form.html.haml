@@ -16,28 +16,10 @@
     = f.label :description
     = f.text_area :description
   .field
-    = f.label :meet_day1
-    = f.check_box :meet_day1
+    = f.label :meet_days
+    = f.number_field :meet_days
   .field
-    = f.label :meet_day2
-    = f.check_box :meet_day2
-  .field
-    = f.label :meet_day3
-    = f.check_box :meet_day3
-  .field
-    = f.label :meet_day4
-    = f.check_box :meet_day4
-  .field
-    = f.label :meet_day5
-    = f.check_box :meet_day5
-  .field
-    = f.label :meet_day6
-    = f.check_box :meet_day6
-  .field
-    = f.label :meet_day7
-    = f.check_box :meet_day7
-  .field
-    = f.label :semester_id
-    = f.number_field :semester_id
+    = f.label :semester
+    = f.text_field :semester
   .actions
     = f.submit 'Save'

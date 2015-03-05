@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Short title:
+  = @assignment.short_title
+%p
+  %b Details:
+  = @assignment.details
+%p
+  %b Url:
+  = @assignment.url
+%p
+  %b Due date:
+  = @assignment.due_date
+%p
+  %b Completed:
+  = @assignment.completed
+%p
+  %b Source:
+  = @assignment.source
+
+= link_to 'Edit', edit_assignment_path(@assignment)
+\|
+= link_to 'Back', assignments_path

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :sections
+  resources :assignments
 
   resources :sources
 

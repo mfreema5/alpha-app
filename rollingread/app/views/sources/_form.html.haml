@@ -10,13 +10,13 @@
     = f.label :short_title
     = f.text_field :short_title
   .field
-    = f.label :biblio_info
-    = f.text_area :biblio_info
+    = f.label :description
+    = f.text_area :description
   .field
-    = f.label :url
-    = f.text_field :url
+    = f.label :dummy
+    = f.check_box :dummy
   .field
-    = f.label :course_id
-    = f.number_field :course_id
+    = f.label :course
+    = f.text_field :course
   .actions
     = f.submit 'Save'

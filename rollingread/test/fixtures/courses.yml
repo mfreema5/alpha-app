@@ -4,24 +4,26 @@ one:
   course_number: MyString
   short_title: MyString
   description: MyText
-  meet_day1: false
-  meet_day2: false
-  meet_day3: false
-  meet_day4: false
-  meet_day5: false
-  meet_day6: false
-  meet_day7: false
-  semester_id: 1
+  meet_days: 1
+  semester_id: 
 
 two:
   course_number: MyString
   short_title: MyString
   description: MyText
-  meet_day1: false
-  meet_day2: false
-  meet_day3: false
-  meet_day4: false
-  meet_day5: false
-  meet_day6: false
-  meet_day7: false
-  semester_id: 1
+  meet_days: 1
+  semester_id: 
+
+spring:
+  course_number: COM531
+  short_title: Web Apps
+  description: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  meet_days: 2
+  semester: spring
+
+fall:
+  course_number: MyString
+  short_title: MyString
+  description: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  meet_days: 32
+  semester:fall
