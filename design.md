@@ -27,52 +27,83 @@ Sketch of default view:
 
 ----
 
-### Validations & Fixtures
+### Types & validations
 
 #### Semesters
-
-| name        | type     | required? | validate         | fixture 1 | fixture 2 |
-|-------------|----------|-----------|------------------|-----------|-----------|
-| short_title | string   |     Y     | uniqueness       | S15       | F15       |
-| description | text     |           |                  |Spring 2015| Fall 2015 |
-| start_date  | date     |     Y     |                  | 12Jan15   | 19Aug15   |
-| end_date    | date     |     Y     | after start_date | 02May15   | 05Dec15   |
-| id          |(implicit)|           |                  | 1         | 2         |
+| name        | type     | required? | validate         |
+|-------------|----------|-----------|------------------|
+| short_title | string   |     Y     | uniqueness       |
+| description | text     |           |                  |
+| start_date  | date     |     Y     |                  |
+| end_date    | date     |     Y     | after start_date |
+| id          |(implicit)|           |                  |
 
 ####Courses 
-
-| name          | type     | required? | validate   | fixture 1 | fixture 2 |
-|---------------|----------|-----------|------------|-----------|-----------|
-| course_number | string   |           |            | COM531    |  COM580   |
-| short_title   | string   |     Y     | uniqueness | Web Apps  | Know-Mgt  |
-| description   | text     |           |            | … … … … … | … … … … … |
-| meet_days     | integer  |     Y     |            |  2        | 32        |
-| semester      |belongs_to|     Y     |            |  1        |  2        |
-| id            |(implicit)|           |            | 11        | 12        |
-
+| name          | type     | required? | validate   |
+|---------------|----------|-----------|------------|
+| course_number | string   |           |            |
+| short_title   | string   |     Y     | uniqueness |
+| description   | text     |           |            |
+| meet_days     | integer  |     Y     |            |
+| semester      |belongs_to|     Y     |            |
+| id            |(implicit)|           |            |
 
 ####Sources
-
-| name        | type     | required? | validate               | fixture 1 | fixture 2 |
-|-------------|----------|-----------|------------------------|-----------|-----------|
-| short_title | string   |     Y     | uniqueness (if !dummy) | AgileDev  | URL       |
-| description | text     |           |                        | Ruby, S., Thomas, D., and D. H. Hansson. Agile Web Development with Rails 4. |  |
-| dummy       | boolean  | | short_title in ("URL","Article") | false     | true      |
-| course      |belongs_to|     Y     |                        | 11        | 12        |
-| id          |(implicit)|           |                        | 21        | 22        |
-
+| name        | type     | required? | validate                         |
+|-------------|----------|-----------|----------------------------------|
+| short_title | string   |     Y     | uniqueness (unless :is_dummy)    |
+| description | text     |           |                                  |
+| dummy       | boolean  |           | short_title in ("URL","Article") |
+| course      |belongs_to|     Y     |                                  |
+| id          |(implicit)|           |                                  |
 
 #### Assignments
+| name        | type     | required? | validate         |
+|-------------|----------|-----------|------------------|
+| short_title | string   |     Y     |                  |
+| details     | text     |           |                  |
+| url         | string   |           | well-formed      |
+| due_date    | date     |     Y     | before Semester.end_date |
+| completed   | boolean  |           |                  |
+| source      |belongs_to|     Y     |                  |
+| id          |(implicit)|           |                  |
 
-| name        | type     | required? | validate         | fixture 1 | fixture 2    |
-|-------------|----------|-----------|------------------|-----------|--------------|
-| short_title | string   |     Y     |                  | Chpt14    | Vid-Long_web |
-| details     | text     |           |                  |Chapter 14 | Jeremy Keith, "The Long Web" |
-| url         | string   |           | well-formed      |           | http://aneventapart.com/news/post/the-long-web-by-jeremy-keith-an-event-apart-video |
-| due_date    | date     | Y | before Semester.end_date | 07Apr15   | 08Sep15      |
-| completed   | boolean  |           |                  | false     | false        |
-| source      |belongs_to|     Y     |                  | 21        | 22           |
-| id          |(implicit)|           |                  | 31        | 32           |
+### Fixtures
+
+#### Semesters
+| name        | spring      | fall      |
+|-------------|-------------|-----------|
+| short_title | S15         | F15       |
+| description | Spring 2015 | Fall 2015 |
+| start_date  | 12Jan15     | 19Aug15   |
+| end_date    | 02May15     | 05Dec15   |
+
+####Courses 
+| name          | spring    | fall      |
+|---------------|-----------|-----------|
+| course_number | COM531    |  COM580   |
+| short_title   | Web Apps  | Know-Mgt  |
+| description   | … … … … … | … … … … … |
+| meet_days     |  2        | 32        |
+| semester      | spring    | fall      |
+
+####Sources
+| name        | spring    | fall      |
+|-------------|-----------|-----------|
+| short_title | AgileDev  | URL       |
+| description | Ruby, S., Thomas, D., and D. H. Hansson. Agile Web Development with Rails 4. |  |
+| dummy       | false     | true      |
+| course      | spring    | fall      |
+
+#### Assignments
+| name        | spring     | fall         |
+|-------------|------------|--------------|
+| short_title | Chpt14     | Vid-Long_web |
+| details     | Chapter 14 | Jeremy Keith, "The Long Web" |
+| url         |            | http://aneventapart.com/news/post/the-long-web-by-jeremy-keith-an-event-apart-video |
+| due_date    | 07Apr15    | 08Sep15      |
+| completed   | false      | false        |
+| source      | spring     | fall         |
 
 
 ----

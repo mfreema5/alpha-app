@@ -24,7 +24,7 @@ spring:
   completed: false
   source: spring
 
-sall:
+fall:
   short_title: Vid-Long_web
   details: Jeremy Keith, "The Long Web"
   url: http://aneventapart.com/news/post/the-long-web-by-jeremy-keith-an-event-apart-video
