@@ -16,7 +16,7 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
-    @course.semester = semester_choices_default.id
+  #  @course.semester = semester_choices_default.id
   end
 
   # GET /courses/1/edit
@@ -80,10 +80,10 @@ class CoursesController < ApplicationController
     # If it were bigger, maybe have a selection by ":user" or summat?
 
     def get_semester_choices
-      @semester_choices = Semester.order(':start_date')
-      if @course.semester.nil?
-        semester_choices_default = most_proximate( @semester_choices, ':end_date' )
-      end
+    #  @semester_choices = Semester.order(':start_date')
+    #  if @course.semester.nil?
+    #    semester_choices_default = most_proximate( @semester_choices, ':end_date' )
+    #  end
     end
 
 end

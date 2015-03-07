@@ -20,7 +20,7 @@
     = f.number_field :meet_days
 
   .field
-    = f.select(:semester,  [['Spring', 1], ['Fall', 2]])
+    = f.collection_select :semester, Semester.order(':start_date'), :id, :short_title, prompt: true
 
   .actions
     = f.submit 'Save'
