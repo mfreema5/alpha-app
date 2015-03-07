@@ -6,7 +6,7 @@ one:
   url: MyString
   due_date: 2015-03-04
   completed: false
-  source_id: 
+  source: one
 
 two:
   short_title: MyString
@@ -14,7 +14,7 @@ two:
   url: MyString
   due_date: 2015-03-04
   completed: false
-  source_id: 
+  source: two
 
 spring:
   short_title: Chpt14

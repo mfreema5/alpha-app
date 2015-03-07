@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :get_semester_choices, only: [:new, :edit, :update]
 
   # GET /courses
   # GET /courses.json
@@ -15,6 +16,7 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @course.semester = semester_choices_default.id
   end
 
   # GET /courses/1/edit
@@ -71,4 +73,17 @@ class CoursesController < ApplicationController
     def course_params
       params.require(:course).permit(:course_number, :short_title, :description, :meet_days, :semester_id)
     end
+
+    include UseDates  # This module gives us the "most_proximate()" method
+
+    # "Semesters" is a small table - we'll just pass the whole thing
+    # If it were bigger, maybe have a selection by ":user" or summat?
+
+    def get_semester_choices
+      @semester_choices = Semester.order(':start_date')
+      if @course.semester.nil?
+        semester_choices_default = most_proximate( @semester_choices, ':end_date' )
+      end
+    end
+
 end

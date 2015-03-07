@@ -5,14 +5,14 @@ one:
   short_title: MyString
   description: MyText
   meet_days: 1
-  semester_id: 
+  semester: one
 
 two:
   course_number: MyString
   short_title: MyString
   description: MyText
   meet_days: 1
-  semester_id: 
+  semester: two
 
 spring:
   course_number: COM531
@@ -26,4 +26,4 @@ fall:
   short_title: MyString
   description: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
   meet_days: 32
-  semester:fall
+  semester: fall

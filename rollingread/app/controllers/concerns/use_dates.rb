@@ -5,6 +5,8 @@ module UseDates
 # with a date_field after today. If the array that was passed is SORTED BY THAT FIELD, 
 # then what gets returned is the row with a date in the future that's nearest to today.
 
+#private?
+
   def most_proximate (sorted_array,date_field)
 
     i = 0
@@ -18,6 +20,6 @@ module UseDates
       i += 1
     end
     return return_row
-  end
+  end # def most_proximate
 
 end

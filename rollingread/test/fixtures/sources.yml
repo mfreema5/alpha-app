@@ -4,13 +4,13 @@ one:
   short_title: MyString
   description: MyText
   dummy: false
-  course_id: 
+  course: one 
 
 two:
   short_title: MyString
   description: MyText
   dummy: false
-  course_id: 
+  course: two 
 
 spring:
   short_title: AgileDev

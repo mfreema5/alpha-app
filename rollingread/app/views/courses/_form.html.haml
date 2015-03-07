@@ -18,8 +18,9 @@
   .field
     = f.label :meet_days
     = f.number_field :meet_days
+
   .field
-    = f.label :semester
-    = f.text_field :semester
+    = f.select(:semester,  [['Spring', 1], ['Fall', 2]])
+
   .actions
     = f.submit 'Save'
