@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  short_title: MyString
+  short_title: MyString1
   description: MyText
   dummy: false
   course: one 
 
 two:
-  short_title: MyString
+  short_title: MyString2
   description: MyText
   dummy: false
   course: two 
