@@ -16,7 +16,6 @@
     = f.label :dummy
     = f.check_box :dummy
   .field
-    = f.label :course
-    = f.text_field :course
+    = f.collection_select :course_id, Course.order('semester_id DESC, short_title'), :id, :short_title, prompt: true
   .actions
     = f.submit 'Save'

@@ -17,7 +17,7 @@
         %td= source.short_title
         %td= source.description
         %td= source.dummy
-        %td= source.course
+        %td= source.course.short_title
         %td= link_to 'Show', source
         %td= link_to 'Edit', edit_source_path(source)
         %td= link_to 'Destroy', source, :method => :delete, :data => { :confirm => 'Are you sure?' }

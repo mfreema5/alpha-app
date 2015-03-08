@@ -22,7 +22,6 @@
     = f.label :completed
     = f.check_box :completed
   .field
-    = f.label :source
-    = f.text_field :source
+    = f.collection_select :source_id, Source.order('course_id ASC, short_title'), :id, :short_title, prompt: true
   .actions
     = f.submit 'Save'

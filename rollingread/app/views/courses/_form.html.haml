@@ -18,9 +18,7 @@
   .field
     = f.label :meet_days
     = f.number_field :meet_days
-
   .field
     = f.collection_select :semester_id, Semester.order(':start_date'), :id, :short_title, prompt: true
-
   .actions
     = f.submit 'Save'

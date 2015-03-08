@@ -21,7 +21,7 @@
         %td= assignment.url
         %td= assignment.due_date
         %td= assignment.completed
-        %td= assignment.source
+        %td= assignment.source.short_title
         %td= link_to 'Show', assignment
         %td= link_to 'Edit', edit_assignment_path(assignment)
         %td= link_to 'Destroy', assignment, :method => :delete, :data => { :confirm => 'Are you sure?' }
