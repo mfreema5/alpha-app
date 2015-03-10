@@ -15,7 +15,11 @@
   %tbody
     - @courses.each do |course|
       %tr
-        %td= course.semester
+        %td
+          - if course.semester.nil?
+            = course.semester
+          - else
+            = course.semester.short_semester
         %td= course.course_number
         %td= course.short_course
         %td= course.full_course

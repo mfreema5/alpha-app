@@ -11,7 +11,10 @@
   = @source.dummy
 %p
   %b Course:
-  = @source.course
+  - if @source.course.nil?
+    = @source.course
+  - else
+    = @source.course.full_course
 
 = link_to 'Edit', edit_source_path(@source)
 \|

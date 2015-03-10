@@ -15,6 +15,10 @@
 %p
   %b Semester:
   = @course.semester
+  - if @course.semester.nil?
+    = @course.semester
+  - else
+    = @course.semester.full_semester
 
 = link_to 'Edit', edit_course_path(@course)
 \|

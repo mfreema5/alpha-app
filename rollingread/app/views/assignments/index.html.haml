@@ -16,7 +16,11 @@
   %tbody
     - @assignments.each do |assignment|
       %tr
-        %td= assignment.source
+        %td
+          - if assignment.source.nil?
+            = assignment.source
+          - else
+            = assignment.source.short_source
         %td= assignment.short_assignment
         %td= assignment.assignment_details
         %td= assignment.url
