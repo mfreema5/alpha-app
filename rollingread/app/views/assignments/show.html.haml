@@ -17,11 +17,7 @@
   = @assignment.completed
 %p
   %b Source:
-  = @assignment.source
-  - if @assignment.source.nil?
-    = @assignment.source
-  - else
-    = @assignment.source.source_details
+  = @assignment.source.nil? ? @assignment.source : @assignment.source.source_details
 
 = link_to 'Edit', edit_assignment_path(@assignment)
 \|

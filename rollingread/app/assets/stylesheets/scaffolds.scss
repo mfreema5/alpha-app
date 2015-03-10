@@ -1,15 +1,47 @@
+//default-font-stack: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+//h123-font-stack: Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+//nav-font-stack: Frutiger, Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+
+// top right bottom left
+
+html {
+  background-color: #88AAAA;
+}
+
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  color: #550000 ; // #354F00 ; // #333;
+  font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+  font-size:   1.000em;
+  line-height: 1.250em;
+  padding: 0.750em;
+}
+
+h1, h2, h3, h4, th {
+  font-family:  Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
+  font-weight: bold
+}
+
+h1 { font-size: 1.500em; line-height: 1.750em; }
+h2 { font-size: 1.375em; line-height: 1.625em; }
+h3 { font-size: 1.250em; line-height: 1.500em; }
+h4, th { font-size: 1.125em; line-height: 1.375em; }
+
+th, td {
+  margin:  0.1875em 0.125em 0.1875em 0.125em ;
+  border:  0 ;
+  padding: 0.125em 0.375em 0.125em 0.375em ;
+}
+
+tr {
+  margin:  0.1875em 0.125em 0.1875em 0.125em ;
+  border:  0 ;
+  padding: 0.125em 0.125em 0.125em 0.125em ;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family:  Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "DejaVu Sans Condensed", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.125em;
 }
 
 pre {

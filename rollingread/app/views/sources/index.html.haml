@@ -14,11 +14,7 @@
   %tbody
     - @sources.each do |source|
       %tr
-        %td
-          - if source.course.nil?
-            = source.course
-          - else
-            = source.course.short_course
+        %td= source.course.nil? ? source.course : source.course.short_course
         %td= source.short_source
         %td= source.source_details
         %td= source.dummy
