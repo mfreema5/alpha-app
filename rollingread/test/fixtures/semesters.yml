@@ -1,25 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  short_title: MyString1
-  description: MyText
-  start_date: 2015-03-04
-  end_date: 2015-03-05
+  short_semester: MyString1
+  full_semester: MyText1
+  start_date: 2015-03-01
+  end_date: 2015-03-02
 
 two:
-  short_title: MyString2
-  description: MyText
-  start_date: 2015-03-04
-  end_date: 2015-03-05
-
-spring:
-  short_title: S15
-  description: Spring 2015
-  start_date: 2015-01-15
-  end_date: 2015-05-01
-
-fall:
-  short_title: F15
-  description: Fall 2015
-  start_date: 2015-08-15
-  end_date: 2015-12-01
+  short_semester: MyString2
+  full_semester: MyText2
+  start_date: 2015-03-08
+  end_date: 2015-03-09

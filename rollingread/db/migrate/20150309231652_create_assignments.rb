@@ -1,8 +1,8 @@
 class CreateAssignments < ActiveRecord::Migration
   def change
     create_table :assignments do |t|
-      t.string :short_title
-      t.text :details
+      t.string :short_assignment
+      t.text :assignment_details
       t.string :url
       t.date :due_date
       t.boolean :completed

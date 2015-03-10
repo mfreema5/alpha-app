@@ -1,25 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  short_title: MyString1
-  description: MyText
+  short_source: MyString1
+  source_details: MyText1
   dummy: false
-  course: one 
+  course_id: one
 
 two:
-  short_title: MyString2
-  description: MyText
+  short_source: MyString2
+  source_details: MyText2
   dummy: false
-  course: two 
-
-spring:
-  short_title: AgileDev
-  description: Ruby, S., Thomas, D., and D. H. Hansson. Agile Web Development with Rails 4.
-  dummy: false
-  course: spring
-
-fall:
-  short_title: URL
-  description: 
-  dummy: true
-  course: fall
+  course_id: two

@@ -18,7 +18,7 @@ class SemestersControllerTest < ActionController::TestCase
 
   test "should create semester" do
     assert_difference('Semester.count') do
-      post :create, semester: { description: @semester.description, end_date: @semester.end_date, short_title: @semester.short_title, start_date: @semester.start_date }
+      post :create, semester: { end_date: @semester.end_date, full_semester: @semester.full_semester, short_semester: @semester.short_semester, start_date: @semester.start_date }
     end
 
     assert_redirected_to semester_path(assigns(:semester))
@@ -35,7 +35,7 @@ class SemestersControllerTest < ActionController::TestCase
   end
 
   test "should update semester" do
-    patch :update, id: @semester, semester: { description: @semester.description, end_date: @semester.end_date, short_title: @semester.short_title, start_date: @semester.start_date }
+    patch :update, id: @semester, semester: { end_date: @semester.end_date, full_semester: @semester.full_semester, short_semester: @semester.short_semester, start_date: @semester.start_date }
     assert_redirected_to semester_path(assigns(:semester))
   end
 

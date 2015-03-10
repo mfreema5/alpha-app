@@ -3,10 +3,10 @@
 %table
   %thead
     %tr
-      %th Short title
-      %th Description
-      %th Dummy
       %th Course
+      %th Short source
+      %th Source details
+      %th Dummy
       %th
       %th
       %th
@@ -14,10 +14,10 @@
   %tbody
     - @sources.each do |source|
       %tr
-        %td= source.short_title
-        %td= source.description
+        %td= source.course
+        %td= source.short_source
+        %td= source.source_details
         %td= source.dummy
-        %td= source.course.short_title
         %td= link_to 'Show', source
         %td= link_to 'Edit', edit_source_path(source)
         %td= link_to 'Destroy', source, :method => :delete, :data => { :confirm => 'Are you sure?' }

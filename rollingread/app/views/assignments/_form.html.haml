@@ -7,11 +7,13 @@
           %li= msg
 
   .field
-    = f.label :short_title
-    = f.text_field :short_title
+    = f.collection_select :source_id, Source.order('short_source'), :id, :short_source, prompt: true
   .field
-    = f.label :details
-    = f.text_area :details
+    = f.label :short_assignment
+    = f.text_field :short_assignment
+  .field
+    = f.label :assignment_details
+    = f.text_area :assignment_details
   .field
     = f.label :url
     = f.text_field :url
@@ -21,7 +23,5 @@
   .field
     = f.label :completed
     = f.check_box :completed
-  .field
-    = f.collection_select :source_id, Source.order('course_id ASC, short_title'), :id, :short_title, prompt: true
   .actions
     = f.submit 'Save'

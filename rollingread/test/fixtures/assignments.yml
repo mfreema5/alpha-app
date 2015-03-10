@@ -1,33 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  short_title: MyString1
-  details: MyText
-  url: MyString
-  due_date: 2015-03-04
+  short_assignment: MyString1
+  assignment_details: MyText1
+  url: MyUrl1
+  due_date: 2015-03-09
   completed: false
-  source: one
+  source_id: one
 
 two:
-  short_title: MyString2
-  details: MyText
-  url: MyString
-  due_date: 2015-03-04
+  short_assignment: MyString2
+  assignment_details: MyText2
+  url: MyUrl2
+  due_date: 2015-03-09
   completed: false
-  source: two
-
-spring:
-  short_title: Chpt14
-  details: Chapter 14
-  url: 
-  due_date: 2015-04-15
-  completed: false
-  source: spring
-
-fall:
-  short_title: Vid-Long_web
-  details: Jeremy Keith, "The Long Web"
-  url: http://aneventapart.com/news/post/the-long-web-by-jeremy-keith-an-event-apart-video
-  due_date: 2015-09-15
-  completed: false
-  source: fall 
+  source_id: two

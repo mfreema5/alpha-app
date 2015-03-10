@@ -1,29 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  course_number: MyString1
-  short_title: MyStringA
-  description: MyText
+  course_number: MyNumber1
+  short_course: MyString1
+  full_course: MyText1
   meet_days: 1
-  semester: one
+  semester_id: one
 
 two:
-  course_number: MyString2
-  short_title: MyStringB
-  description: MyText
-  meet_days: 1
-  semester: two
-
-spring:
-  course_number: COM531
-  short_title: Web Apps
-  description: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  course_number: MyNumber2
+  short_course: MyString2
+  full_course: MyText2
   meet_days: 2
-  semester: spring
-
-fall:
-  course_number: MyString
-  short_title: MyString
-  description: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-  meet_days: 32
-  semester: fall
+  semester_id: two

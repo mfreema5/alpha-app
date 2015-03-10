@@ -11,25 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305005119) do
+ActiveRecord::Schema.define(version: 20150309231652) do
 
   create_table "assignments", force: :cascade do |t|
-    t.string   "short_title"
-    t.text     "details"
+    t.string   "short_assignment"
+    t.text     "assignment_details"
     t.string   "url"
     t.date     "due_date"
     t.boolean  "completed"
     t.integer  "source_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   add_index "assignments", ["source_id"], name: "index_assignments_on_source_id"
 
   create_table "courses", force: :cascade do |t|
     t.string   "course_number"
-    t.string   "short_title"
-    t.text     "description"
+    t.string   "short_course"
+    t.text     "full_course"
     t.integer  "meet_days"
     t.integer  "semester_id"
     t.datetime "created_at",    null: false
@@ -39,21 +39,21 @@ ActiveRecord::Schema.define(version: 20150305005119) do
   add_index "courses", ["semester_id"], name: "index_courses_on_semester_id"
 
   create_table "semesters", force: :cascade do |t|
-    t.string   "short_title"
-    t.text     "description"
+    t.string   "short_semester"
+    t.text     "full_semester"
     t.date     "start_date"
     t.date     "end_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "sources", force: :cascade do |t|
-    t.string   "short_title"
-    t.text     "description"
+    t.string   "short_source"
+    t.text     "source_details"
     t.boolean  "dummy"
     t.integer  "course_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_index "sources", ["course_id"], name: "index_sources_on_course_id"

@@ -4,17 +4,17 @@
   %b Course number:
   = @course.course_number
 %p
-  %b Short title:
-  = @course.short_title
+  %b Short course:
+  = @course.short_course
 %p
-  %b Description:
-  = @course.description
+  %b Full course:
+  = @course.full_course
 %p
   %b Meet days:
   = @course.meet_days
 %p
   %b Semester:
-  = @course.semester.description
+  = @course.semester
 
 = link_to 'Edit', edit_course_path(@course)
 \|

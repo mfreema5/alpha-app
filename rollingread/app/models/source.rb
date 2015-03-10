@@ -1,10 +1,7 @@
 class Source < ActiveRecord::Base
-  belongs_to :course
+  belongs_to :course, inverse_of: :sources
   has_many :assignments
-  validates :short_title, :course, presence: true
-  # validates :short_title, uniqueness: true, unless: :is_dummy?
 
-  # def is_dummy?
-  #   :short_title == "URL" || :short_title == "Article"
-  # end
+  # validates :short_source, presence: true
+
 end

@@ -56,3 +56,8 @@ end
 
 gem 'haml-rails', '~> 0.8'
 
+
+# From 'https://github.com/rroblak/seed_dump'
+# '"Seed dump" allows you to create seed data files from the existing data in your database.'
+
+gem 'seed_dump'

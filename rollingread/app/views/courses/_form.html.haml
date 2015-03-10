@@ -7,18 +7,18 @@
           %li= msg
 
   .field
+    = f.collection_select :semester_id, Semester.order('start_date'), :id, :short_semester, prompt: true
+  .field
     = f.label :course_number
     = f.text_field :course_number
   .field
-    = f.label :short_title
-    = f.text_field :short_title
+    = f.label :short_course
+    = f.text_field :short_course
   .field
-    = f.label :description
-    = f.text_area :description
+    = f.label :full_course
+    = f.text_area :full_course
   .field
     = f.label :meet_days
     = f.number_field :meet_days
-  .field
-    = f.collection_select :semester_id, Semester.order(':start_date'), :id, :short_title, prompt: true
   .actions
     = f.submit 'Save'

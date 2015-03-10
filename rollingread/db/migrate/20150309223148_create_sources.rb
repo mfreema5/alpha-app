@@ -1,8 +1,8 @@
 class CreateSources < ActiveRecord::Migration
   def change
     create_table :sources do |t|
-      t.string :short_title
-      t.text :description
+      t.string :short_source
+      t.text :source_details
       t.boolean :dummy
       t.belongs_to :course, index: true
 

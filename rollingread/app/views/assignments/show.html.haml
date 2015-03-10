@@ -1,11 +1,11 @@
 %p#notice= notice
 
 %p
-  %b Short title:
-  = @assignment.short_title
+  %b Short assignment:
+  = @assignment.short_assignment
 %p
-  %b Details:
-  = @assignment.details
+  %b Assignment details:
+  = @assignment.assignment_details
 %p
   %b Url:
   = @assignment.url
@@ -17,7 +17,7 @@
   = @assignment.completed
 %p
   %b Source:
-  = @assignment.source.description
+  = @assignment.source
 
 = link_to 'Edit', edit_assignment_path(@assignment)
 \|

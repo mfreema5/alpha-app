@@ -3,11 +3,11 @@
 %table
   %thead
     %tr
-      %th Course number
-      %th Short title
-      %th Description
-      %th Meet days
       %th Semester
+      %th Course number
+      %th Short course
+      %th Full course
+      %th Meet days
       %th
       %th
       %th
@@ -15,11 +15,11 @@
   %tbody
     - @courses.each do |course|
       %tr
+        %td= course.semester
         %td= course.course_number
-        %td= course.short_title
-        %td= course.description
+        %td= course.short_course
+        %td= course.full_course
         %td= course.meet_days
-        %td= course.semester.short_title
         %td= link_to 'Show', course
         %td= link_to 'Edit', edit_course_path(course)
         %td= link_to 'Destroy', course, :method => :delete, :data => { :confirm => 'Are you sure?' }

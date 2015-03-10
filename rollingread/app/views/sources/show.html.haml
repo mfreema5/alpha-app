@@ -1,17 +1,17 @@
 %p#notice= notice
 
 %p
-  %b Short title:
-  = @source.short_title
+  %b Short source:
+  = @source.short_source
 %p
-  %b Description:
-  = @source.description
+  %b Source details:
+  = @source.source_details
 %p
   %b Dummy:
   = @source.dummy
 %p
   %b Course:
-  = @source.course.description
+  = @source.course
 
 = link_to 'Edit', edit_source_path(@source)
 \|
