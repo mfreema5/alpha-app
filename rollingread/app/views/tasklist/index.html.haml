@@ -1,0 +1,20 @@
+%h2.tasklist RollingRead &ndash; Tasklist
+
+- @assignments.each do |assignment|
+  %article.tasklist
+    %h3.tasklist= assignment.due_date
+    %section.tasklist
+      %p.tasklist#course= assignment.source.nil? ? assignment.source : assignment.source.course.nil? ? assignment.source.course : assignment.source.course.short_course
+      %p.tasklist#source= assignment.source.nil? ? assignment.source :  assignment.source.short_source
+      %p.tasklist#assignment= assignment.url.blank? ? assignment.short_assignment : link_to( assignment.short_assignment , assignment.url )
+      %p.tasklist#completed
+        = label_tag('Completed') 
+        = check_box_tag('completed', value = "true", checked = assignment.completed, disabled: true )
+
+%article.tasklist#nav
+  %form.tasklist
+    = link_to( button_tag('Semesters'), '/semesters' )
+    = link_to( button_tag('Courses'), '/courses' )
+    = link_to( button_tag('Sources'), '/sources' )
+    = link_to( button_tag('Assignments'), '/assignments' )
+
