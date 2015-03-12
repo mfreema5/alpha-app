@@ -121,7 +121,8 @@ Store the days that a class meets as an integer between 1 and 127, by assigning 
 A class that meets Monday, Wednesday, Friday, would have an integer of 21.
 A class that meets Tuesday, Thursday, would have an integer of 10.
 
+## Sketch: flow through configuration/setup pages
 
-
+![Flow thru pages](img/rollingread-flowchart-thru-pages.png)
 
 
