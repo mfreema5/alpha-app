@@ -2,10 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// aa-light-golden { #FFEED2; }
+// ab-mid-golden { #E4C184; }
+// ac-dark-golden { #AA8139; }
+// ad-going-brown { #704B0A; }
+// ad-gone-to-brown { #362200; }
+//
+// ba-light-golden-green { #FFF6D2; }
+// bb-mid-golden-green { #E4D184; }
+// bc-dark-golden-green { #AA9439; }
+// bd-going-green { #705C0A; }
+// bd-khaki-moss { #362B00; }
+//
+// ca-peachy-pink { #FFE4D2; }
+// cb-peachy-pastel { #E4AB84; }
+// cc-tangy-muddy { #AA6639; }
+// cd-rich-mud { #70330A; }
+// ce-mahogany-mud { #361600; }
+//
 // top right bottom left
 
 article.tasklist {
-  background-color: #99BBBB ;
+  background-color: #E4C184;
   margin:  0.5625em 0.5625em 0.5625em 0.375em ;  
   border:  0 ;
   border-radius: 0.5625em ;
@@ -13,27 +31,33 @@ article.tasklist {
 }
 
 article.tasklist#nav {
-  width: 75% ;
-  margin:  1.5625em 0.5625em 0.5625em 0.375em ;  
+  width: 22em ;
+  margin:  1.5625em 0 0.5625em 0.375em ;
+  padding: 0;
+  form { margin: 0; }
 }
 
-
 form.tasklist {
-  background-color: #99BBBB ;
+  background-color: #E4C184;
   margin:  0.5625em 0.5625em 0.5625em 0.375em ;  
   border:  0 ;
   border-radius: 0.5625em ;
-  padding: 0.125em 0.125em 0.125em 0.375em ;
+  padding: 0.125em 0.125em 0.125em 0.125em ;
 }
 
 form.tasklist a {
-  margin: 0.125em 2% 0.125em 2% ;
+  margin: 0.125em 0.125em 0.125em 1% ;
   padding: 0 ;
+  color: #362200;
+  &:visited { color: #362200; }
+  &:hover   { 
+    color: #361600; 
+    background-color: #E4C184; 
+  }
 }
 
-form.tasklist button {
-  background-color: #354F00 ;
-  color: #669999 ;
+form.tasklist a button {
+  background-color: #FFEED2;
   margin: 0.125em 0 0.125em 0 ;
   border-width: 0 ;
   border-radius: 0.6750em;
@@ -41,8 +65,11 @@ form.tasklist button {
   font-size: 1.0625em;
   font-family:  Frutiger, "Arial Narrow", Trebuchet, Helvetica, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
   line-height: 1.125em;
+  &:hover   { 
+    color: #361600; 
+    background-color: #FFE4D2; // #FFEED2; 
+  }
 }
-
 
 h3.tasklist {
   display: inline-block ;
@@ -64,25 +91,6 @@ p.tasklist {
 }
 
 
-
-//.color-primary-1 { color: #FFAAAA }
-//.color-primary-2 { color: #D46A6A }
-//.color-primary-0 { color: #AA3939 }	/* Main red */
-//.color-primary-3 { color: #801515 }
-//.color-primary-4 { color: #550000 }
-//
-//.color-secondary-1-1 { color: #669999 }
-//.color-secondary-1-2 { color: #407F7F }
-//.color-secondary-1-0 { color: #226666 }	/* Main bluish */
-//.color-secondary-1-3 { color: #0D4D4D }
-//.color-secondary-1-4 { color: #003333 }
-//
-//.color-secondary-2-1 { color: #D4EE9F }
-//.color-secondary-2-2 { color: #A5C663 }
-//.color-secondary-2-0 { color: #7B9F35 }	/* Main greenish */
-//.color-secondary-2-3 { color: #567714 }
-//.color-secondary-2-4 { color: #354F00 }
-//
 
 
 
