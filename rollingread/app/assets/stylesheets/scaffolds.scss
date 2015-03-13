@@ -54,6 +54,13 @@ h1, h2 {
   padding: 0 0.3125em 0 0.3125em ;
 }
 
+p#newone { 
+  background-color: #E4C184;
+  display: inline-block;
+  border-radius: 0.5625em ;
+  padding: 0 0.3125em 0 0.3125em ;
+}
+
 a {
   color: #AA6639;
   &:visited {
