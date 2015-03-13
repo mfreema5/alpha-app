@@ -1,14 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  course_number: MyNumber1
+  course_number: AAA111
   short_course: MyString1
   full_course: MyText1
   meet_days: 1
   semester_id: one
 
 two:
-  course_number: MyNumber2
+  course_number: BBB222
   short_course: MyString2
   full_course: MyText2
   meet_days: 2

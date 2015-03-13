@@ -3,7 +3,7 @@
 one:
   short_assignment: MyString1
   assignment_details: MyText1
-  url: MyUrl1
+  url: http://MyUrl1
   due_date: 2015-03-09
   completed: false
   source_id: one
@@ -11,7 +11,7 @@ one:
 two:
   short_assignment: MyString2
   assignment_details: MyText2
-  url: MyUrl2
+  url: http://MyUrl2
   due_date: 2015-03-09
   completed: false
   source_id: two
