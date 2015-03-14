@@ -28,6 +28,8 @@ article.tasklist {
   border:  0 ;
   border-radius: 0.5625em ;
   padding: 0 0 0 0.375em ;
+  position: relative;     // probably a bad idea
+  left: inherit;          // probably a bad idea
 }
 
 article.tasklist#nav {
@@ -73,14 +75,26 @@ form.tasklist a button {
 
 h3.tasklist {
   display: inline-block ;
+  float: left;          // probably a bad idea
+  position: absolute;   // probably a bad idea
+  top: 0.0625em;        // probably a bad idea
 }
 
 section.tasklist {
+  background-color: #FFEED2;
   display: inline-block ;
-  margin:  0 0.375em 0 0.375em ;  
-  border:  0 ;
+  margin:  0.3125em 0.25em 0.3125em 0.25em;  
+  border-radius: inherit;
   padding: 0 0.0625em 0 0.0625em ;
+  position: relative;   // probably a bad idea
+  left: 6em;            // probably a bad idea
 }
+
+section.tasklist + section.tasklist {
+  margin-top:  0;
+}
+
+
 
 p.tasklist {
   display: inline-block ;
