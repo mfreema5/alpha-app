@@ -2,7 +2,7 @@ class Assignment < ActiveRecord::Base
   belongs_to :source, inverse_of: :assignments
 
   validates :short_assignment, :due_date, :source_id, presence: true
-  validates :url, format: { with: /\Ahttp:\/\//, message: "invalid URL format" }
+#  validates :url, format: { with: /\Ahttp:\/\//, message: "invalid URL format" }
 
 
 # Annoyance:  
