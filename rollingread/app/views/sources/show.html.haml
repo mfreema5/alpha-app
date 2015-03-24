@@ -13,6 +13,6 @@
   %b Course:
   = @source.course.nil? ? @source.course : @source.course.full_course
 
-= link_to 'Edit', edit_source_path(@source)
+%p#newone= link_to 'Edit', edit_source_path(@source)
 \|
-= link_to 'Back', sources_path
+%p#newone= link_to 'Back', sources_path

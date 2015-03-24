@@ -16,6 +16,6 @@
   %b Semester:
   = @course.semester.nil? ? @course.semester : @course.semester.full_semester
 
-= link_to 'Edit', edit_course_path(@course)
+%p#newone= link_to 'Edit', edit_course_path(@course)
 \|
-= link_to 'Back', courses_path
+%p#newone= link_to 'Back', courses_path

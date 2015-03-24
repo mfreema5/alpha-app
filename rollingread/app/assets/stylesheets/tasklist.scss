@@ -32,13 +32,6 @@ article.tasklist {
   left: inherit;          // probably a bad idea
 }
 
-article.tasklist#nav {
-  width: 22em ;
-  margin:  1.5625em 0 0.5625em 0.375em ;
-  padding: 0;
-  form { margin: 0; }
-}
-
 form.tasklist {
   background-color: #E4C184;
   margin:  0.5625em 0.5625em 0.5625em 0.375em ;  
@@ -97,6 +90,7 @@ section.tasklist + section.tasklist {
 
 
 p.tasklist {
+  background-color: #FFEED2;
   display: inline-block ;
   min-width: 7.9375em;
   margin:  0 0.375em 0 0.375em ;  
